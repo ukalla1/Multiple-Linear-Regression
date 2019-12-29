@@ -16,7 +16,7 @@ def BackwardElimination(x, y, sl):
 			for j in range(0, var_len - i):
 				if (regressor_OLS.pvalues[j].astype(float) == maxVar):
 					x = np.delete(x, j, 1)
-	# print(regressor_OLS.summary())
+	print(regressor_OLS.summary())
 	return x
 
 # Read the csv into data variable
