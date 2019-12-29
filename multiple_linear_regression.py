@@ -33,6 +33,9 @@ x = column_transformer.fit_transform(x)
 # to account for dummy variable trap
 x = x[:, 1:]
 
+# appending a column of ones to include the consts
+x = np.append(arr = np.ones((50,1)).astype(int), values = x, axis = 1)
+
 #Performing backward elimination and picking only imprtant features
 sl = float(5/100)
 x_opt = x[:, [0,1,2,3,4]]
